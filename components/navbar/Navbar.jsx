@@ -88,9 +88,9 @@ const Navbar = () => {
           </div>
           {/*  */}
 
-          <div className="relative group">
+          <div className="relative group ">
             <button className="flex mx-auto rounded-lg md:w-full md:inline md:mt-0 md:ml-0 focus:outline-none">
-              <a className="hover:text-green-700 px-4">Quem Somos</a>
+              <a className="hover:text-green-700 px-4 text-center font-bold">Quem Somos</a>
             </button>
             <div className="absolute z-10 hidden mt-4 bg-gray-50 group-hover:block w-full rounded-b-md">
               <div className=" rounded-md shadow-lg w-full py-4 flex justify-center">
@@ -115,9 +115,16 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
+            <div className="text-center font-bold">
+            <LinkBtn link={"/"} label={"Campanhas"} />
+            <LinkBtn link={"/"} label={"Arquivos"} />
+            <LinkBtn link={"/blog"} label={"Blog"} />
+            <LinkBtn link={"/"} label={"Contacto"} />
+            </div>
+          </div>
           </div>
         </div>
-      </div>
+      
     </nav>
   );
 };
