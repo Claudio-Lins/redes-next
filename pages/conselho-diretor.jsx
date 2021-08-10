@@ -5,7 +5,7 @@ export default function conselhoDiretor( {conselhoDiretor} ) {
     <div className="container mx-auto flex flex-col px-4 lg:px-10">
       
       {conselhoDiretor && conselhoDiretor.map((conselhoDiretor) => (
-        <div key={conselhoDiretor.id}>
+        <div key={conselhoDiretor.ordem}>
           <Card
           src={conselhoDiretor.picture.url}
           alt={conselhoDiretor.alt}
@@ -14,6 +14,7 @@ export default function conselhoDiretor( {conselhoDiretor} ) {
           email={conselhoDiretor.email}
           description={conselhoDiretor.description}
           />
+          {conselhoDiretor.ordem}
         </div>))}
       
     </div>

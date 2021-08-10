@@ -5,7 +5,7 @@ export default function conselhoInternacional( {conselhoInternacional} ) {
   return (
     <div className="container mx-auto flex flex-col px-4 lg:px-10">
       
-      {conselhoInternacional && conselhoInternacional.sort((n1, n2) => n1 + n2).map((conselhoInternacional) => (
+      {conselhoInternacional && conselhoInternacional.map((conselhoInternacional) => (
         <div key={conselhoInternacional.id}>
           <Card
           src={conselhoInternacional.picture.url}
