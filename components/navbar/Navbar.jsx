@@ -96,7 +96,10 @@ const Navbar = () => {
               <div className=" rounded-md shadow-lg w-full py-4 flex justify-center">
                 <div className="flex flex-col justify-center items-center">
                   <LinkBtn link={"/quem-somos"} label={"Quem Somos"} />
-                  <LinkBtn link={"/#"} label={"Carta de Princípios"} />
+                  <LinkBtn
+                    link={"/carta-de-principios"}
+                    label={"Carta de Princípios"}
+                  />
                   <LinkBtn
                     link={"/conselho-internacional"}
                     label={"Conselho Internacional"}
