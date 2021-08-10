@@ -45,7 +45,7 @@ const Navbar = () => {
                     <div className="pt-2 rounded-md shadow-md bg-white w-36">
                       <div className="">
                         <LinkBtnLgDrop
-                          link={"/"}
+                          link={"/carta-de-principios"}
                           label={"Carta de Princípios"}
                         />
                         <LinkBtnLgDrop
