@@ -1,13 +1,15 @@
-import 'tailwindcss/tailwind.css'
-import Navbar from '../components/navbar/Navbar'
+import "tailwindcss/tailwind.css";
+import Layout from "../components/Layout";
+
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-    <Navbar />
-    <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
