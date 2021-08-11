@@ -4,8 +4,10 @@ import Card from "../components/Card";
 export default function conselhoInternacional( {conselhoInternacional} ) {
   return (
     <div className="container mx-auto flex flex-col px-4 lg:px-10">
+      <h2 className="text-center text-3xl text-gray-700 font-bold mt-8 mb-2">Conselho Interenacional</h2>
+      <hr />
       
-      {conselhoInternacional && conselhoInternacional.map((conselhoInternacional) => (
+      {conselhoInternacional && conselhoInternacional.sort((a, b) => a.ordem - b.ordem).map((conselhoInternacional) => (
         <div key={conselhoInternacional.id}>
           <Card
           src={conselhoInternacional.picture.url}
