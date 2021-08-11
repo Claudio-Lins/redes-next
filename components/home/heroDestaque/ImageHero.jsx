@@ -1,0 +1,16 @@
+import Image from "next/image";
+
+export default function ImageHero() {
+  return (
+    <div className="w-full h-[600px] relative">
+      <Image
+        src="/home/img03.jpeg"
+        alt="Imagem Rede sem fronteiras"
+        layout="fill"
+        objectFit='cover'
+        loading='lazy'
+        quality='high'
+      />
+    </div>
+  );
+}
