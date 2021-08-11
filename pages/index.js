@@ -1,9 +1,10 @@
-import Head from 'next/head'
+import Head from "next/head";
 import React, { useState } from "react";
-import Image from "next/image";
-import SlideDestaque from "../components/home/heroDestaque/SlideDestaque"
+import { fetchAPIRede } from "../lib/api";
+import SlideDestaque from "../components/home/heroDestaque/SlideDestaque";
+import BlogsHero from "../components/blog/BlogsHero";
 
-export default function Home() {
+export default function Home({ posts }) {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <Head>
@@ -13,19 +14,22 @@ export default function Home() {
 
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
         <div className="">
-        <SlideDestaque />
+          <SlideDestaque />
         </div>
-        <div className="absolute">
-          Texto destaque
-        </div>
+        <div className="absolute">Texto destaque</div>
       </main>
-      <section className='bg-purple-600 w-full h-[600px] flex justify-center items-center'>
-        text
-        </section>
-
-      <footer className="flex relative bg-white bg-opacity-80 items-center justify-center w-full h-24 border-t">
-        <p>@clinsDev</p>
-      </footer>
+      <section className="container h-[500px]">
+        <BlogsHero posts={posts} />
+      </section>
     </div>
-  )
+  );
+}
+
+export async function getStaticProps() {
+  const [posts] = await Promise.all([fetchAPIRede("/posts")]);
+
+  return {
+    props: { posts },
+    revalidate: 1,
+  };
 }
