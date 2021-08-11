@@ -12,7 +12,7 @@ export default function About({ aboutPage }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="mx-auto py-4 relative w-full h-[320px]">
+      <div className="mx-auto py-4 relative w-full h-[120px] md:h-[320px] xl:h-[480px]">
         <Image
           src={aboutPage.singleCover01.url}
           alt="Rede Sem Fronteiras"
@@ -53,7 +53,7 @@ export default function About({ aboutPage }) {
         <h2 className="sm:text-3xl text-2xl font-medium text-center text-gray-900 mb-6">
           {aboutPage.subTitle04}
         </h2>
-          <div className="relative w-full h-[400px] mb-4">
+          <div className="relative h-[160px] md:h-[320px] xl:h-[400px] mb-4">
           <Image
             src={aboutPage.singleCover02.url}
             alt="Rede Sem Fronteiras"
