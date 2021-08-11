@@ -14,11 +14,11 @@ export default function Home({ posts }) {
 
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
         <div className="">
-          <SlideDestaque />
+          {/* <SlideDestaque /> */}
         </div>
         <div className="absolute">Texto destaque</div>
       </main>
-      <section className="container h-[500px]">
+      <section className="container w-full sm:h-[500px] mx-auto mt-10">
         <BlogsHero posts={posts} />
       </section>
     </div>
