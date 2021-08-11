@@ -6,7 +6,7 @@ export default function Phone() {
     <>
       <div className="flex items-center">
         <div className="flex space-x-2">
-          <Link href="/">
+          <Link href="/" passHref>
             <Image
               src="/social-network/phone-call.svg"
               alt="Phone Call"

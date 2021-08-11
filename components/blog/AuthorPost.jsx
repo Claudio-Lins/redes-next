@@ -6,6 +6,7 @@ export default function AuthorPost(props) {
       <div className="relative w-8 h-8 rounded-full  overflow-hidden">
         <Image
           src="/conselho-diretor/img-conselho-diretor01.jpeg"
+          alt='img-conselho-diretor01'
           layout="fill"
         />
       </div>

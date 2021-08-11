@@ -8,8 +8,8 @@ export default function BlogsHeroMob({ posts }) {
     <div className="flex flex-col gap-y-4 justify-center px-4">
       {posts &&
         posts.slice(0, 3).map((posts) => (
-          <div className=''>
-            <Link href={`/${posts.slug}`} key={posts.id}>
+          <div className='' key={posts.id}>
+            <Link href={`/${posts.slug}`}>
               <a>
               <CardBlogMob posts={posts} />
               </a>

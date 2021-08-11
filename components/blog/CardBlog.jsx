@@ -10,7 +10,7 @@ export default function CardBlog({ posts }) {
   return (
     <div className="max-w-[370px] rounded-md shadow-md bg-gray-50 border overflow-hidden">
       <div className="w-full h-[168px] lg:h-[250px] relative">
-        <Image src={posts.cover.url} layout="fill" objectFit="cover" />
+        <Image src={posts.cover.url} layout="fill" objectFit="cover" alt={posts.title} />
       </div>
       <div className="w-full p-6">
         <div className="flex justify-between mb-2">

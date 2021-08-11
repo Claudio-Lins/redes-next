@@ -6,8 +6,8 @@ export default function BlogsHero({ posts }) {
     <div className="flex flex-col sm:flex-row sm:space-x-4 w-full justify-center">
       {posts &&
         posts.slice(0, 3).map((posts) => (
-          <div className='flex justify-center'>
-            <Link href={`/${posts.slug}`} key={posts.id}>
+          <div className='flex justify-center' key={posts.id}>
+            <Link href={`/${posts.slug}`}>
               <a>
                 <CardBlog posts={posts} />
               </a>

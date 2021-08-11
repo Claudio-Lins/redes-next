@@ -6,6 +6,7 @@ export default function cartaDePrincipios() {
       <div className=" shadow-md w-full h-[300px] relative">
         <Image
           src="/carta-de-pincipios/carta-principios.jpg"
+          alt='carta-principios'
           layout="fill"
           objectFit="fill"
           loading='lazy'

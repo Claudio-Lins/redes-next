@@ -20,10 +20,10 @@ export default function SlideDestaque() {
   return (
     <div>
       <Fade {...fadeProperties}>
-        <Image src="/home/img01.jpeg" layout="fill" objectFit="cover" />
-        <Image src="/home/img02.jpeg" layout="fill" objectFit="cover" />
-        <Image src="/home/img03.jpeg" layout="fill" objectFit="cover" />
-        <Image src="/home/img04.jpeg" layout="fill" objectFit="cover" />
+        <Image src="/home/img01.jpeg" layout="fill" objectFit="cover" alt='imagem'/>
+        <Image src="/home/img02.jpeg" layout="fill" objectFit="cover" alt='imagem'/>
+        <Image src="/home/img03.jpeg" layout="fill" objectFit="cover" alt='imagem'/>
+        <Image src="/home/img04.jpeg" layout="fill" objectFit="cover" alt='imagem'/>
       </Fade>
     </div>
   );

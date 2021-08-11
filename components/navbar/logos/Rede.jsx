@@ -5,7 +5,7 @@ export default function Rede() {
   return (
     <>
       <div className=" cursor-pointer">
-        <Link href="/">
+        <Link href="/" passHref>
           <Image
             src="/Logos/lg-redesf-1280x427.png"
             alt="Rede Sem Fronteiras"

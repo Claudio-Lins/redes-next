@@ -5,7 +5,7 @@ export default function Youtube() {
     return (
         <>
             <div className="flex cursor-pointer hover:animate-bounce">
-              <Link href="/">
+              <Link href="/" passHref>
                 <Image
                   src="/social-network/youtube-icon.svg"
                   alt="Youtube"
