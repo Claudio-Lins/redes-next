@@ -14,3 +14,5 @@ export default function ImageHero() {
     </div>
   );
 }
+
+// function getDa
