@@ -1,11 +1,15 @@
+import Bars from "../components/navbar/Bars";
+import Hamburguer from "../components/navbar/Hamburguer";
 
 
 export default function Blog({  }) {
 
 
   return (
-    <div className=" min-h-screen flex flex-col justify-center items-center">
-      blog page
+    <div className=" min-h-screen flex flex-col justify-center items-center bg-blue-600">
+      <Bars />
+      <Hamburguer />
+      <h1>Blog</h1>
       {/* <div>
         {articles &&
           articles.map((articles) => (
