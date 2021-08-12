@@ -6,18 +6,18 @@ export default function cartaDePrincipios() {
       <div className=" shadow-md w-full h-[300px] relative">
         <Image
           src="/carta-de-pincipios/carta-principios.jpg"
-          alt='carta-principios'
+          alt="carta-principios"
           layout="fill"
           objectFit="fill"
-          loading='lazy'
+          loading="lazy"
         />
       </div>
       <div className="container mx-auto mt-10 px-4">
-        <h1 className="text-center text-gray-700 text-4xl font-bold tracking-wide mb-2 antialiased">
+        <h1 className="text-center text-gray-700 text-4xl font-bold font-Roboto tracking-wide mb-2 antialiased">
           Carta de Pincípios
         </h1>
         <hr />
-        <p className="mt-4 text-justify prose-md text-gray-700">
+        <p className="mt-4 text-justify prose-md text-gray-700 font-Roboto">
           A <strong>Rede Sem Fronteiras</strong> é um espaço de articulação
           sul-americana de organizações que trabalham com emigrantes,
           imigrantes, deslocados internos e refugiados, e de organizações
