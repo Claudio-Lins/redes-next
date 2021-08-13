@@ -40,21 +40,20 @@ export default function Navbar() {
 
         <div className={click ? "nav-menu active" : "nav-menu"}>
           <div className="navItem">
-            <Link href="/" className="" onClick={closeMobileMenu}>
-              <a>Home</a>
+            <Link href="/" className="">
+              <a onClick={closeMobileMenu}>Home</a>
             </Link>
           </div>
           <div
-            className="flex items-center p-2 mx-auto text-sm text-white md:text-blue-600 z-10 hover:border-b-2 hover:border-blue-600 "
+            className="flex items-center p-2 mx-auto text-sm text-white font-bold sm:font-normal md:text-blue-600 z-10 hover:border-b-2 hover:border-blue-600 "
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >
             <Link
               href="/quem-somos"
               className=""
-              onClick={closeMobileMenu}
             >
-              <a className="">
+              <a onClick={closeMobileMenu}>
                 Quem somos <i className="fas fa-caret-down" />{" "}
               </a>
             </Link>
@@ -62,26 +61,26 @@ export default function Navbar() {
           </div>
 
           <div className="navItem">
-            <Link href="#" className="" onClick={closeMobileMenu}>
-              <a>Ações</a>
+            <Link href="#" className="">
+              <a onClick={closeMobileMenu}>Ações</a>
             </Link>
           </div>
 
           <div className="navItem">
-            <Link href="#" className="" onClick={closeMobileMenu}>
-              <a>Notícias</a>
+            <Link href="#" className="">
+              <a onClick={closeMobileMenu}>Notícias</a>
             </Link>
           </div>
 
           <div className="navItem">
-            <Link href="#" className="" onClick={closeMobileMenu}>
-              <a>Campanhas</a>
+            <Link href="#" className="">
+              <a onClick={closeMobileMenu}>Campanhas</a>
             </Link>
           </div>
 
           <div className="navItem">
-            <Link href="#" className="" onClick={closeMobileMenu}>
-              <a>Arquivo</a>
+            <Link href="#" className="">
+              <a onClick={closeMobileMenu}>Arquivo</a>
             </Link>
           </div>
 
@@ -89,9 +88,9 @@ export default function Navbar() {
             <Link
               href="#"
               className="nav-links-mobile"
-              onClick={closeMobileMenu}
+             
             >
-              <a>Contacto</a>
+              <a onClick={closeMobileMenu}>Contacto</a>
             </Link>
           </div>
         </div>
