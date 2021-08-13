@@ -8,7 +8,7 @@ import ImageHero from "../components/home/heroDestaque/ImageHero";
 
 export default function Home({ posts }) {
   return (
-    <div className="flex flex-col items-center pt-2">
+    <div className="flex flex-col items-center">
       <Head>
         <title>Rede Sem Fronteiras</title>
         <link rel="icon" href="/favicon.ico" />
