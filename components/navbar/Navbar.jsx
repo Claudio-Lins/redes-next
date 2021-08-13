@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import { Button } from './Button'
-import  Dropdown   from './Dropdown'
+import { Button } from "./Button";
+import Dropdown from "./Dropdown";
 import Link from "next/link";
 import Image from "next/image";
 import Rede from "./logos/Rede";
@@ -11,57 +11,72 @@ export default function Navbar() {
   const [dropdown, setDropdown] = useState(false);
 
   const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false)
+  const closeMobileMenu = () => setClick(false);
 
   const onMouseEnter = () => {
     if (window.innerWidth < 960) {
-      setDropdown(false)
+      setDropdown(false);
     } else {
-      setDropdown(false)
+      setDropdown(true);
     }
-  }
+  };
   const onMouseLeave = () => {
     if (window.innerWidth < 960) {
-      setDropdown(false)
+      setDropdown(false);
     } else {
-      setDropdown(true)
+      setDropdown(false);
     }
-  }
+  };
 
   return (
     <>
-      <nav className="navbar bg-yellow-600 flex justify-between items-center h-[100px]">
-        <Rede />
-        <div className="menu-icon" onClick={handleClick}>
-          <i className={click ? "fas fa-times" : "fas fa-bars"} />
+      <nav className="bg-yellow-600 flex justify-center items-center h-[100px]">
+        <div>
+          <Rede />
+          <div className="menu-icon" onClick={handleClick}>
+            <i className={click ? "fas fa-times" : "fas fa-bars"} />
+          </div>
         </div>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <li className='nav-item'>
-            <Link href='#' className='nav-links' onClick={closeMobileMenu}>
+
+        <div className={click ? "nav-menu active" : "nav-menu"}>
+          <div className="flex items-center hover:bg-black px-4 py-2 mx-auto font-semibold text-white">
+            <Link href="#" className="" onClick={closeMobileMenu}>
               <a>Home</a>
             </Link>
-          </li>
-          <li className='nav-item'
+          </div>
+          <div
+            className="flex items-center hover:bg-black px-4 py-2 mx-auto font-semibold text-white z-10"
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >
-            <Link href='#' className='nav-links' onClick={closeMobileMenu}>
-              <a>About <i className='fas fa-caret-down'/> </a>
+            <Link
+              href="#"
+              className="py-2 px-4 hover:bg-red-500 w-full h-8"
+              onClick={closeMobileMenu}
+            >
+              <a>
+                About <i className="fas fa-caret-down" />{" "}
+              </a>
             </Link>
             {dropdown && <Dropdown />}
-          </li>
-          <li className='nav-item'>
-            <Link href='#' className='nav-links' onClick={closeMobileMenu}>
+          </div>
+
+          <div className="flex items-center hover:bg-black px-4 py-2 mx-auto font-semibold text-white">
+            <Link href="#" className="py-2 px-4" onClick={closeMobileMenu}>
               <a>Link #02</a>
             </Link>
-          </li>
-          <li className='nav-item'>
-            <Link href='#' className='nav-links-mobile' onClick={closeMobileMenu}>
+          </div>
+
+          <div className="flex items-center hover:bg-black px-4 py-2 mx-auto font-semibold text-white">
+            <Link
+              href="#"
+              className="nav-links-mobile py-2 px-4"
+              onClick={closeMobileMenu}
+            >
               <a>Mobile</a>
             </Link>
-          </li>
-          {/* <Button /> */}
-        </ul>
+          </div>
+        </div>
       </nav>
     </>
   );
