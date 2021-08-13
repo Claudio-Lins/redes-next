@@ -30,7 +30,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-gray-50 border-b shadow flex justify-center items-center h-[100px]">
+      <nav className="bg-gray-50 border-b shadow flex justify-center items-center h-[100px] fixed z-20 inset-0">
         <div>
           <Rede />
           <div className="menu-icon" onClick={handleClick}>
