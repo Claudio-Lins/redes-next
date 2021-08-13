@@ -1,21 +1,21 @@
 export const MenuItems = [
     {
-      title: 'Marketing',
-      path: '/marketing',
+      title: 'Carta de Principios',
+      path: '/carta-de-principios',
       cName: 'dropdown-link'
     },
     {
-      title: 'Consulting',
-      path: '/consulting',
+      title: 'Conselho Diretor',
+      path: '/conselho-diretor',
       cName: 'dropdown-link'
     },
     {
-      title: 'Design',
-      path: '/design',
+      title: 'Conselho Internacional',
+      path: '/conselho-internacional',
       cName: 'dropdown-link'
     },
     {
-      title: 'Development',
+      title: 'Secretaria Técnica',
       path: '/development',
       cName: 'dropdown-link'
     }

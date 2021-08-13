@@ -30,7 +30,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-yellow-600 flex justify-center items-center h-[100px]">
+      <nav className="bg-gray-50 border-b shadow flex justify-center items-center h-[100px]">
         <div>
           <Rede />
           <div className="menu-icon" onClick={handleClick}>
@@ -39,41 +39,59 @@ export default function Navbar() {
         </div>
 
         <div className={click ? "nav-menu active" : "nav-menu"}>
-          <div className="flex items-center hover:bg-black px-4 py-2 mx-auto font-semibold text-white">
-            <Link href="#" className="" onClick={closeMobileMenu}>
+          <div className="navItem">
+            <Link href="/" className="" onClick={closeMobileMenu}>
               <a>Home</a>
             </Link>
           </div>
           <div
-            className="flex items-center hover:bg-black px-4 py-2 mx-auto font-semibold text-white z-10"
+            className="flex items-center p-2 mx-auto text-sm text-blue-600 z-10 hover:border-b-2 hover:border-blue-600 "
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >
             <Link
-              href="#"
-              className="py-2 px-4 hover:bg-red-500 w-full h-8"
+              href="/quem-somos"
+              className=""
               onClick={closeMobileMenu}
             >
-              <a>
-                About <i className="fas fa-caret-down" />{" "}
+              <a className="">
+                Quem somos <i className="fas fa-caret-down" />{" "}
               </a>
             </Link>
             {dropdown && <Dropdown />}
           </div>
 
-          <div className="flex items-center hover:bg-black px-4 py-2 mx-auto font-semibold text-white">
-            <Link href="#" className="py-2 px-4" onClick={closeMobileMenu}>
-              <a>Link #02</a>
+          <div className="navItem">
+            <Link href="#" className="" onClick={closeMobileMenu}>
+              <a>Ações</a>
             </Link>
           </div>
 
-          <div className="flex items-center hover:bg-black px-4 py-2 mx-auto font-semibold text-white">
+          <div className="navItem">
+            <Link href="#" className="" onClick={closeMobileMenu}>
+              <a>Notícias</a>
+            </Link>
+          </div>
+
+          <div className="navItem">
+            <Link href="#" className="" onClick={closeMobileMenu}>
+              <a>Campanhas</a>
+            </Link>
+          </div>
+
+          <div className="navItem">
+            <Link href="#" className="" onClick={closeMobileMenu}>
+              <a>Arquivo</a>
+            </Link>
+          </div>
+
+          <div className="navItem">
             <Link
               href="#"
-              className="nav-links-mobile py-2 px-4"
+              className="nav-links-mobile"
               onClick={closeMobileMenu}
             >
-              <a>Mobile</a>
+              <a>Contacto</a>
             </Link>
           </div>
         </div>

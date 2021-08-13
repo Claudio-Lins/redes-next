@@ -3,7 +3,13 @@
 
 @tailwind components;
 
+.dropdownMenu {
+  @apply bg-white text-blue-600 w-[160px] -ml-5 rounded shadow-sm absolute top-[90px] list-none text-center flex flex-col justify-center transform ;
+}
 
+.navItem {
+  @apply flex items-center text-sm hover:border-b-2 hover:border-blue-600 p-2 mx-auto text-blue-600;
+}
   
 
 @tailwind utilities;
@@ -35,15 +41,24 @@
   font-size: 1.6rem;
 } */
 
-.nav-menu {
+/* .nav-menu {
   display: grid;
   grid-template-columns: repeat(5, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
   width: 70vw;
-  justify-content: end;
+  justify-content: center;
   margin-right: 2rem;
+} */
+
+.nav-menu {
+  display: flex;
+  width: 60%;
+  height: 11vh;
+  top: 80px;
+  opacity: 1;
+  transition: all 0.5s ease;
 }
 
 /* .nav-item {
@@ -94,12 +109,13 @@
   }
 
   .nav-menu.active {
-    background: #000000;
+    background: #000000d7;
     left: 0;
     opacity: 1;
     transition: all 0.9s ease;
     z-index: 1;
     height: auto;
+    padding: 30px;
   }
 
   /* .nav-links {
@@ -161,14 +177,15 @@
 }
 
 /* Dropdown */
-.dropdown-menu {
+/* .dropdown-menu {
   background: red;
   width: 200px;
   position: absolute;
   top: 80px;
+  margin-right: 20px;
   list-style: none;
-  text-align: start;
-}
+  text-align: center;
+} */
 
 .dropdown-menu li {
   background: #1888ff;
@@ -193,9 +210,9 @@
 }
 
 @media screen and (max-width: 960px) {
-  /* .fa-caret-down {
+  .fa-caret-down {
     display: none;
-  } */
+  }
 }
 
 /* Botão */

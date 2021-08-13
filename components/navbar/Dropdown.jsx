@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { MenuItems } from "./MenuItems";
 
 export default function Dropdown() {
@@ -10,24 +9,25 @@ export default function Dropdown() {
 
   return (
     <>
-      <ul
+      <div
         onClick={handleClick}
-        className={click ? "dropdown-menu clicked" : "dropdown-menu"}
+        className={click ? "dropdownMenu hideem" : "dropdownMenu"}
       >
         {MenuItems.map((item, index) => {
           return (
-            <li key={index}>
+            <div className="flex justify-center px-3 py-4 rounded shadow hover:bg-yellow-600 hover:text-white transition duration-500 ease-in-out" key={index}>
               <Link
-                className={item.cName}
+                className='dropdownMenu'
+                // className={item.cName}
                 href={item.path}
                 onClick={() => setClick(false)}
               >
                 <a>{item.title}</a>
               </Link>
-            </li>
+            </div>
           );
         })}
-      </ul>
+      </div>
     </>
   );
 }
