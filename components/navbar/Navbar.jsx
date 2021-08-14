@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-
-import { Button } from "./Button";
 import Dropdown from "./Dropdown";
 import Link from "next/link";
-import Image from "next/image";
 import Rede from "./logos/Rede";
+import SocialMedia from "./SocialMedia";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
@@ -30,7 +28,10 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-gray-50 border-b shadow flex items-center h-[100px] fixed z-20 inset-0">
+      <div className="relative">
+        <SocialMedia />
+      </div>
+      <nav className="bg-gray-50 border-b shadow flex sm:justify-evenly items-center h-[100px] fixed z-20 inset-0">
         <div>
           <Rede />
           <div className="menu-icon" onClick={handleClick}>
@@ -49,10 +50,7 @@ export default function Navbar() {
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >
-            <Link
-              href="/quem-somos"
-              className=""
-            >
+            <Link href="/quem-somos" className="">
               <a onClick={closeMobileMenu}>
                 Quem somos <i className="fas fa-caret-down" />{" "}
               </a>
@@ -85,11 +83,7 @@ export default function Navbar() {
           </div>
 
           <div className="navItem">
-            <Link
-              href="#"
-              className="nav-links-mobile"
-             
-            >
+            <Link href="#" className="nav-links-mobile">
               <a onClick={closeMobileMenu}>Contacto</a>
             </Link>
           </div>
