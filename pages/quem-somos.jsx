@@ -1,29 +1,57 @@
+import React, { useState, useEffect } from "react";
+
 import Image from "next/image";
 import Head from "next/head";
 import LgMembers from "../components/quem/lgMembers";
 import ObjetivosTxt from "../components/quem/ObjetivosTxt";
 import BlocoTxt from "../components/quem/BlocoTxt";
+import BtnQuem from "../components/quem/BtnQuem";
 
 export default function About({ aboutPage }) {
+
+  const [btns, setBtns] = useState(true)
+
+    function showBtns() {
+        if (window.innerWidth < 480) {
+            setBtns(true);
+        } else {
+            setBtns(false);
+        }
+      };
+
+      
+        useEffect(() => {
+            showBtns()
+        });
+
   return (
-    <div className="min-h-screen bg-white mt-16 mb-20">
+    <div className="min-h-screen bg-white mt-2 mb-20">
       <Head>
         <title>{aboutPage.title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <div className="mx-auto py-4 relative w-full h-[120px] md:h-[320px] xl:h-[480px]">
+      <div className="mx-auto py-4 relative w-full h-[120px] md:h-[320px] xl:h-[480px] my-2">
         <Image
           src={aboutPage.singleCover01.url}
           alt="Rede Sem Fronteiras"
           layout="fill"
-          quality='medium'
-          loading='lazy'
+          quality="medium"
+          loading="lazy"
         />
       </div>
+      {btns && <section className="">
+      <hr />
+      <div className="flex flex-wrap justify-evenly my-2">
+        <BtnQuem label="Carta de Princípios" href="/carta-de-principios" />
+        <BtnQuem label="Conselho Internacional" href="/conselho-internacional" />
+        <BtnQuem label="Conselho Diretor" href="/conselho-diretor" />
+        <BtnQuem label="Secretaria Técnica" href="/" />
+      </div>
+      <hr />
+      </section>}
 
       <section>
-        <div className="container px-5 py-12 mx-auto">
+        <div className="container px-5 py-6 mx-auto sm:mt-8">
           <BlocoTxt
             title={aboutPage.subTitle01}
             content={aboutPage.content01}
@@ -53,16 +81,15 @@ export default function About({ aboutPage }) {
         <h2 className="sm:text-3xl text-2xl font-medium text-center text-gray-900 mb-6">
           {aboutPage.subTitle04}
         </h2>
-          <div className="relative h-[160px] md:h-[320px] xl:h-[400px] mb-4">
+        <div className="relative h-[160px] md:h-[320px] xl:h-[400px] mb-4">
           <Image
             src={aboutPage.singleCover02.url}
             alt="Rede Sem Fronteiras"
             layout="fill"
-            objectFit='cover'
-            loading='lazy'
+            objectFit="cover"
+            loading="lazy"
           />
-          </div>
-
+        </div>
 
         <div className="flex flex-wrap justify-center items-center">
           <LgMembers
