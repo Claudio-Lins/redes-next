@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Card from "../components/Card";
 import Secretarias from "../components/secretarias/Secretarias";
 import { fetchAPIRede } from "../lib/api";
 

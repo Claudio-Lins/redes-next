@@ -27,7 +27,7 @@ export default function Card(props) {
           </div>
         </div>
         <div className="mx-auto mt-2 ">
-          <p className=" font-light text-sm text-gray-600 text-justify py-2 px-4 antialiased prose max-w-none">
+          <p className=" font-light text-sm text-gray-600 text-justify py-2 px-2 antialiased prose max-w-none">
             {/* dangerouslySetInnerHTML={{ __html: props.description }}> */}
             <ReactMarkdown>{props.description}</ReactMarkdown>
           </p>
