@@ -16,7 +16,7 @@ export const MenuItems = [
     },
     {
       title: 'Secretaria Técnica',
-      path: '/development',
+      path: '/secretaria-tecnica',
       cName: 'dropdown-link'
     }
   ];
