@@ -18,7 +18,7 @@ export default function Card(props) {
           </div>
           <div className="flex flex-col text-center text-gray-600 mt-2 w-full px-2">
             <h3 className="font-bold text-[10px]">{props.cargo}</h3>
-            <p className="font-light text-xs">{props.nome}</p>
+            <p className=" text-sm">{props.nome}</p>
             <a className="text-xs sm:text-[10px] ml-2 text-blue-400"
               href="mailto:{props.email}"
             >
