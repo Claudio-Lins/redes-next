@@ -89,7 +89,7 @@ const Contact = () => {
                 type="checkbox"
                 className="rounded border-gray-300 text-yellow-600 focus:ring-offset-yellow-600"
               />
-              <label for="terms" className="ml-2 text-xs text-gray-800">
+              <label htmlFor="terms" className="ml-2 text-xs text-gray-800">
                 Eu concordo com os{" "}
                 <a href="#" className=" hover:text-yellow-700">
                   Termos
