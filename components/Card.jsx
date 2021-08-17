@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ReactMarkdown from "react-markdown"
+import ReactMarkdown from "react-markdown";
 
 export default function Card(props) {
   return (
@@ -14,20 +14,21 @@ export default function Card(props) {
               objectFit="cover"
             />
           </div>
-          <div className='flex flex-col text-center text-gray-600 mt-2 w-full px-2'>
-            <h3 className='font-bold text-sm'>{props.cargo}</h3>
-            <p className='font-light text-sm'>{props.nome}</p>
+          <div className="flex flex-col text-center text-gray-600 mt-2 w-full px-2">
+            <h3 className="font-bold text-[10px]">{props.cargo}</h3>
+            <p className="font-light text-xs">{props.nome}</p>
             <a className="text-xs sm:text-[10px] ml-2 text-blue-400"
-               href="mailto:{props.email}">
-               {props.email}
-                </a>
+              href="mailto:{props.email}"
+            >
+              {props.email}
+            </a>
           </div>
         </div>
         <div className="w-full mt-2 ">
-            <p className=" font-light text-sm text-gray-600 text-justify py-2 px-4 antialiased prose prose-yellow md:max-w-prose">
+          <p className=" font-light text-sm text-gray-600 text-justify py-2 px-4 antialiased prose prose-yellow md:max-w-prose">
             {/* dangerouslySetInnerHTML={{ __html: props.description }}> */}
             <ReactMarkdown>{props.description}</ReactMarkdown>
-            </p>
+          </p>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React, { useState } from "react";
-import { fetchAPIRede } from "../lib/api";
+import { fetchAPIRedeDois } from "../lib/api";
 import SlideDestaque from "../components/home/heroDestaque/SlideDestaque";
 import BlogsHero from "../components/blog/BlogsHero";
 import BlogsHeroMob from "../components/blog/BlogsHeroMob";
@@ -26,7 +26,9 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const [posts] = await Promise.all([fetchAPIRede("/posts")]);
+  const [posts] = await Promise.all([
+    fetchAPIRedeDois("/posts")
+  ]);
 
   return {
     props: { posts },

@@ -41,7 +41,7 @@ export default function Navbar() {
 
         <div className={click ? "nav-menu active" : "nav-menu"}>
           <div className="navItem">
-            <Link href="/" className="">
+            <Link href="/">
               <a onClick={closeMobileMenu}>Home</a>
             </Link>
           </div>
@@ -65,19 +65,19 @@ export default function Navbar() {
           </div>
 
           <div className="navItem">
-            <Link href="#" className="">
+            <Link href="#">
               <a onClick={closeMobileMenu}>Notícias</a>
             </Link>
           </div>
 
           <div className="navItem">
-            <Link href="#" className="">
+            <Link href="#">
               <a onClick={closeMobileMenu}>Campanhas</a>
             </Link>
           </div>
 
           <div className="navItem">
-            <Link href="#" className="">
+            <Link href="#">
               <a onClick={closeMobileMenu}>Arquivo</a>
             </Link>
           </div>

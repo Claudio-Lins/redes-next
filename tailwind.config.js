@@ -1,5 +1,5 @@
 
-const defaultTheme = require('tailwindcss/defaultTheme')
+// const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   mode: "jit",
@@ -7,6 +7,17 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            color: '#333',
+            strong: {
+              fontWeight: '700',
+            },
+            // ...
+          },
+        },
+      },
       fontFamily: {
         Roboto: ["Roboto"],
       },
