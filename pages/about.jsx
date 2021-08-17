@@ -6,8 +6,9 @@ import BtnQuem from "../components/quem/BtnQuem";
 import { fetchAPIRede } from "../lib/api";
 import BlocoTxt from "../components/quem/BlocoTxt";
 import ObjetivosTxt from "../components/quem/ObjetivosTxt";
+import Logos from "../components/quem/Logos";
 
-export default function About({ about }) {
+export default function About({ about, logos }) {
   const [btns, setBtns] = useState(true);
 
   function showBtns() {
@@ -28,7 +29,7 @@ export default function About({ about }) {
         <title>About page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="mx-auto py-4 relative w-full h-[120px] md:h-[320px] xl:h-[480px] my-2">
+      <div className="mx-auto py-4 relative w-full h-[120px] sm:h-[320px] 2xl:h-[480px] my-2">
         <Image
           src={about.section[0].imagem.url}
           alt="Rede Sem Fronteiras"
@@ -52,6 +53,7 @@ export default function About({ about }) {
           <hr />
         </section>
       )}
+      <main className=" container mx-auto">
       <section>
         <div className="container px-5 py-6 mx-auto sm:mt-8">
           <BlocoTxt
@@ -97,34 +99,22 @@ export default function About({ about }) {
           </div>
         </div>
       </section>
-      <section className="">
-          {about.section[4].membros.map((membros) => (
-              <div className="" key={membros.id}>
-              
-              {console.log(membros.name)}
-              </div>
-              ))}
-         
+      <section>
+        <Logos logos={logos} />
       </section>
-
-      {/* {console.log(about.section)} */}
-      {/* {console.log(about.section)} */}
-      {/* {console.log(about.section[4].logos[1].imagem.name)} */}
+      </main>
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const [about] = await Promise.all([fetchAPIRede("/quem-somos")]);
+  const [about, logos] = await Promise.all([
+    fetchAPIRede("/quem-somos"),
+    fetchAPIRede("/logos"),
+  ]);
 
   return {
-    props: { about },
+    props: { about, logos },
     revalidate: 1,
   };
 }
-
-//
-// {about.section[3].objetivo.map((objetivos, index) => (
-//     <div className="flex flex-wrap -m-4" key={index}>
-//   <ObjetivosTxt number={objetivos.subTitle} text={objetivos.content} />
-// </div>))}
