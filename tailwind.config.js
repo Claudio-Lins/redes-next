@@ -40,5 +40,6 @@ module.exports = {
     require('@tailwindcss/typography')({
       modifiers: ['sm', 'lg'],
     }),
+    require('@tailwindcss/forms'),
   ],
 };

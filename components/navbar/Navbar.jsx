@@ -83,7 +83,7 @@ export default function Navbar() {
           </div>
 
           <div className="navItem">
-            <Link href="#" className="nav-links-mobile">
+            <Link href="/contact" className="nav-links-mobile">
               <a onClick={closeMobileMenu}>Contacto</a>
             </Link>
           </div>
