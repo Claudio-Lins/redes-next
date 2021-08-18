@@ -29,3 +29,17 @@ export function getURLAPIRedeDois(path = "") {
   }
 
 ///////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+export function getURLAPILocal(path = "") {
+    return `${process.env.API_URL_LOCAL || "http://localhosts:1337"}${path}`;
+  }
+  export async function fetchAPILocal(path) {
+    const requestUrl = getURLAPILocal(path);
+    const response = await fetch(requestUrl);
+    const data = await response.json();
+    return data;
+  }
+
+///////////////////////////////////////////////////////////////////////////////////////

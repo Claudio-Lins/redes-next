@@ -1,10 +1,12 @@
 import Head from "next/head";
 import React, { useState } from "react";
 import { fetchAPIRedeDois } from "../lib/api";
-import SlideDestaque from "../components/home/heroDestaque/SlideDestaque";
+import { fetchAPILocal } from "../lib/api";
 import BlogsHero from "../components/blog/BlogsHero";
 import BlogsHeroMob from "../components/blog/BlogsHeroMob";
-import ImageHero from "../components/home/heroDestaque/ImageHero";
+import HeroDestaque from "../components/home/destaque/HeroDestaque";
+
+
 
 export default function Home({ posts }) {
   return (
@@ -13,8 +15,8 @@ export default function Home({ posts }) {
         <title>Rede Sem Fronteiras</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <SlideDestaque /> */}
-      <ImageHero />
+      <HeroDestaque />
+
       <section className="hidden sm:flex container w-full sm:h-[500px] mx-auto mt-12">
         <BlogsHero posts={posts} />
       </section>
@@ -27,7 +29,7 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
   const [posts] = await Promise.all([
-    fetchAPIRedeDois("/posts")
+    fetchAPIRedeDois("/posts"),
   ]);
 
   return {

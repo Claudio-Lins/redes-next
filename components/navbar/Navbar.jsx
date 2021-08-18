@@ -28,10 +28,10 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative z-30">
         <SocialMedia />
       </div>
-      <nav className="bg-gray-50 border-b shadow flex sm:justify-evenly items-center h-[100px] fixed z-20 inset-0">
+      <nav className="bg-gray-50 border-b shadow flex sm:justify-evenly items-center h-[100px] fixed z-30 inset-0">
         <div>
           <Rede />
           <div className="menu-icon" onClick={handleClick}>
