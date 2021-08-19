@@ -32,7 +32,7 @@ export default function HeroDestaque() {
                 "Defesa e promoção dos direitos das pesoas migrantes e refugiada"
               }
               style={
-                "bg-blue-900 text-center mx-auto flex justify-center items-center font-light p-8 rounded-full w-48 h-48"
+                "bg-blue-900 text-center mx-auto flex justify-center items-center font-light p-8 rounded-full w-48 h-48 shadow-lg"
               }
             />
             <Topicos
@@ -40,20 +40,20 @@ export default function HeroDestaque() {
                 "Atuação conjunta na construção de políticas alternativas de governança migratória"
               }
               style={
-                "bg-yellow-50 mx-auto text-blue-900 border-4 border-blue-900 text-center flex justify-center items-center font-light p-8 rounded-full w-48 h-48"
+                "bg-yellow-50 mx-auto text-blue-900 border-4 border-blue-900 text-center flex justify-center items-center font-light p-8 rounded-full w-48 h-48 shadow-lg"
               }
             />
             <Topicos
               content={"Advocacy e incidência e espaços decisórios"}
               style={
-                "bg-yellow-700 mx-auto text-white text-center leading-snug flex justify-center items-center font-light p-8 rounded-full w-48 h-48"
+                "bg-yellow-700 mx-auto text-white text-center leading-snug flex justify-center items-center font-light p-8 rounded-full w-48 h-48 shadow-lg"
               }
             />
           </div>
           <div className="w-full flex flex-col justify-center mt-4 md:hidden">
             <SlideDestaqueTopicos />
           </div>
-          <div className="bg-white px-3 py-1 text-blue-900 text-center w-36 rounded-lg mt-4">
+          <div className="bg-white px-3 py-1 text-blue-900 border-4 text-center w-36 rounded-lg mt-12 hover:border-4 hover:border-blue-800 hover:bg-transparent hover:text-white transition-all">
             <button>Leia mais</button>
           </div>
         </div>
