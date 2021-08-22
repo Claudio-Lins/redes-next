@@ -8,21 +8,19 @@ import BlocoTxt from "../components/quem/BlocoTxt";
 import BtnQuem from "../components/quem/BtnQuem";
 
 export default function About({ aboutPage }) {
+  const [btns, setBtns] = useState(true);
 
-  const [btns, setBtns] = useState(true)
+  function showBtns() {
+    if (window.innerWidth < 480) {
+      setBtns(true);
+    } else {
+      setBtns(false);
+    }
+  }
 
-    function showBtns() {
-        if (window.innerWidth < 480) {
-            setBtns(true);
-        } else {
-            setBtns(false);
-        }
-      };
-
-      
-        useEffect(() => {
-            showBtns()
-        });
+  useEffect(() => {
+    showBtns();
+  });
 
   return (
     <div className="min-h-screen bg-white mt-2 mb-20">
@@ -35,20 +33,24 @@ export default function About({ aboutPage }) {
           src={aboutPage.singleCover01.url}
           alt="Rede Sem Fronteiras"
           layout="fill"
-          quality="medium"
           loading="lazy"
         />
       </div>
-      {btns && <section className="">
-      <hr />
-      <div className="flex flex-wrap justify-evenly my-2">
-        <BtnQuem label="Carta de Princípios" href="/carta-de-principios" />
-        <BtnQuem label="Conselho Internacional" href="/conselho-internacional" />
-        <BtnQuem label="Conselho Diretor" href="/conselho-diretor" />
-        <BtnQuem label="Secretaria Técnica" href="/" />
-      </div>
-      <hr />
-      </section>}
+      {btns && (
+        <section className="">
+          <hr />
+          <div className="flex flex-wrap justify-evenly my-2">
+            <BtnQuem label="Carta de Princípios" href="/carta-de-principios" />
+            <BtnQuem
+              label="Conselho Internacional"
+              href="/conselho-internacional"
+            />
+            <BtnQuem label="Conselho Diretor" href="/conselho-diretor" />
+            <BtnQuem label="Secretaria Técnica" href="/" />
+          </div>
+          <hr />
+        </section>
+      )}
 
       <section>
         <div className="container px-5 py-6 mx-auto sm:mt-8">
@@ -93,98 +95,98 @@ export default function About({ aboutPage }) {
 
         <div className="flex flex-wrap justify-center items-center">
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={"organizacao-filhos-do-mundo_lg.png"}
             alt={"Organização Filhos do Mundo"}
             width={90}
             height={90}
           />
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={"cdh-lg-200x142.png"}
             alt={"CDH"}
             width={100}
             height={71}
           />
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={"casa-do-brasil-de-lisboa-lg.png"}
             alt={"Casa do Brasil de Lisboa"}
             width={90}
             height={90}
           />
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={"cdhic-color-horizontal-espacio-sin-fronteras-esf-100x50.png"}
             alt={"CDHIC"}
             width={100}
             height={50}
           />
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={"proandes-lg-100x100.jpg"}
             alt={"Proandes"}
             width={100}
             height={100}
           />
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={"unifesp-lindomar-albuquerque-lg-166x100.png"}
             alt={"Unifesp"}
             width={133}
             height={80}
           />
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={"cedal-lg-100x100.png"}
             alt={"Cedal"}
             width={90}
             height={90}
           />
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={"fec-lg-100x100.jpg"}
             alt={"FEC"}
             width={80}
             height={80}
           />
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={"del-agora-lg.jpg"}
             alt={"Del"}
             width={166}
             height={100}
           />
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={"codhes-lg-144x50.png"}
             alt={"Codhes"}
             width={144}
             height={50}
           />
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={"coapy-lg-113x80.jpg"}
             alt={"Coapy"}
             width={135}
             height={96}
           />
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={"re-lg-159x70.jpg"}
             alt={"re"}
             width={159}
             height={70}
           />
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={"pal-oriana-Jara-lg-113x80.png"}
             alt={"Pal Oriana Jara"}
             width={113}
             height={80}
           />
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={
               "coordenacao-direitos-sociais-Saude-e-seguridade-lg-120x85.jpg"
             }
@@ -193,28 +195,28 @@ export default function About({ aboutPage }) {
             height={85}
           />
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={"alampyme-br-360x70.gif"}
             alt={"alampyme"}
             width={288}
             height={56}
           />
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={"casa-da-gente-lg-80x120.png"}
             alt={"Casa da Gente"}
             width={80}
             height={120}
           />
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={"umsa-lg-74x150.png"}
             alt={"umsa"}
             width={80}
             height={120}
           />
           <LgMembers
-            list={"#"}
+            link={"#"}
             src={"Instituto-edesio-passos-lg-113x80.png"}
             alt={"Instituto edesio passos"}
             width={141}

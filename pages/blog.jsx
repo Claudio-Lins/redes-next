@@ -27,7 +27,6 @@ export default function Blog({  }) {
                   height={500}
                   layout='intrinsic'
                   loading='lazy'
-                  quality='high'
                   />
               </div>
             </div>

@@ -50,7 +50,7 @@ export default function Navbar() {
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >
-            <Link href="/about" className="">
+            <Link href="/quem-somos" className="">
               <a onClick={closeMobileMenu}>
                 Quem somos <i className="fas fa-caret-down" />{" "}
               </a>

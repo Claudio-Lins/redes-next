@@ -9,7 +9,6 @@ export default function ImageHero() {
         layout="fill"
         objectFit='cover'
         loading='lazy'
-        quality='high'
       />
     </div>
   );

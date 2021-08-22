@@ -23,6 +23,7 @@ export default function About({ about, logos }) {
     showBtns();
   });
 
+
   return (
     <div className="min-h-screen bg-white mt-2 mb-20">
       <Head>
@@ -34,7 +35,6 @@ export default function About({ about, logos }) {
           src={about.section[0].imagem.url}
           alt="Rede Sem Fronteiras"
           layout="fill"
-          quality="medium"
           loading="lazy"
         />
       </div>
