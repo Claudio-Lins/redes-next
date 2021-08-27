@@ -1,21 +1,18 @@
 @tailwind base;
 
-
 @tailwind components;
 
 .dropdownMenu {
-  @apply bg-white text-blue-600 w-[160px] -ml-5 rounded shadow-sm absolute top-[90px] list-none text-center flex flex-col justify-center transform ;
+  @apply bg-white text-blue-600 w-[160px] -ml-5 rounded shadow-sm absolute top-[90px] list-none text-center flex flex-col justify-center transform;
 }
 
 .navItem {
-  @apply flex items-center text-sm py-5 font-bold tracking-wide sm:font-normal hover:border-b-2 hover:border-blue-600 p-2 mx-auto sm:text-blue-600 text-white;
+  @apply flex items-center text-sm font-bold tracking-wide sm:font-normal hover:border-b-4 hover:border-blue-600 p-2 mx-auto sm:text-blue-600 text-white;
 }
-  
 
 @tailwind utilities;
 
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 /* Navbar */
 /* .navbar {
@@ -55,7 +52,7 @@
 .nav-menu {
   display: flex;
   width: 60%;
-  height: 11vh;
+  height: 10vh;
   top: 80px;
   opacity: 1;
   transition: all 0.3s ease;

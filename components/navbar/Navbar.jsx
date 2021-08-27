@@ -77,7 +77,7 @@ export default function Navbar() {
           </div>
 
           <div className="navItem">
-            <Link href="#">
+            <Link href="/arquivos">
               <a onClick={closeMobileMenu}>Arquivo</a>
             </Link>
           </div>
