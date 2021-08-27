@@ -46,7 +46,7 @@ export default function Navbar() {
             </Link>
           </div>
           <div
-            className="flex items-center p-2 mx-auto text-sm text-white font-bold sm:font-normal md:text-blue-600 z-10 hover:border-b-2 hover:border-blue-600 "
+            className="flex items-center p-2 mx-auto text-sm text-white font-bold sm:font-normal md:text-blue-600 z-10 hover:border-b-2 hover:border-blue-700 "
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >
