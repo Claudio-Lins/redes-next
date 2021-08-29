@@ -4,6 +4,8 @@ import Link from "next/link";
 import Rede from "./logos/Rede";
 import SocialMedia from "./SocialMedia";
 import IconDown from "../navbar/IconDown";
+import IconClose from "./IconClose";
+import IconBars from "./IconBars";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
@@ -33,10 +35,10 @@ export default function Navbar() {
         <SocialMedia />
       </div>
       <nav className="bg-gray-50 border-b shadow flex sm:justify-evenly items-center h-[100px] fixed z-30 inset-0">
-        <div>
+        <div className="flex items-center">
           <Rede />
           <div className="menu-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"} />
+            {click ? <IconClose /> : <IconBars />}
           </div>
         </div>
 
@@ -60,7 +62,10 @@ export default function Navbar() {
                   className="md:py-8 flex items-center"
                   onClick={closeMobileMenu}
                 >
-                  <span>Quem somos</span> <IconDown />
+                  <span>Quem somos</span>
+                  <span className="hidden sm:flex">
+                    <IconDown />
+                  </span>
                 </a>
               </Link>
               {dropdown && <Dropdown />}

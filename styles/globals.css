@@ -149,9 +149,9 @@
   } */
 
   .menu-icon {
-    display: block;
+    display: flex;
     position: absolute;
-    top: 0;
+    top: 20px;
     right: 0;
     transform: translate(-100%, 50%);
     font-size: 1.8rem;
