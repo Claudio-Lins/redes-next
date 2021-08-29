@@ -10,13 +10,13 @@ export default function HeroDestaque() {
         <div className="w-full ">
           <SlideDestaque />
         </div>
-        <div className="absolute py-4 px-8 z-10 lg:px-96 text-white bg-black w-full min-h-full bg-opacity-40 flex flex-col justify-center items-center">
-          <div className="border border-white p-4 -mt-20 md:m-4">
-            <div className="relative bg-white text-gray-900 p-4">
+        <div className="absolute py-4 px-8 sm:px-24 xl:px-72 2xl:px-[600px] z-10 text-white bg-black w-full min-h-full bg-opacity-40 flex flex-col justify-center items-center">
+          <div className="border border-white rounded p-4">
+            <div className="relative bg-white text-gray-900 shadow-md rounded p-4">
               <h1 className="text-3xl font-bold text-center mb-2 text-blue-900 antialiased">
                 A Rede Sem Fronteiras
               </h1>
-              <p className="text-xs text-center md:p-4 leading-relaxed antialiased">
+              <p className="text-xs text-center leading-relaxed antialiased lg:text-sm">
                 Somos uma <strong>rede</strong> de organizações da sociedade
                 civil, associações de imigrantes, instituições acadêmicas e
                 ativistas com atuação na <strong>defesa</strong> e na{" "}
@@ -26,7 +26,7 @@ export default function HeroDestaque() {
               </p>
             </div>
           </div>
-          <div className="hidden md:flex justify-evenly space-x-4 mt-2 text-sm">
+          <div className="hidden md:flex justify-evenly space-x-4 mt-10 text-sm">
             <Topicos
               content={
                 "Defesa e promoção dos direitos das pesoas migrantes e refugiada"

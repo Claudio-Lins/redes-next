@@ -34,7 +34,7 @@ export default function Navbar() {
       <div className="relative z-30">
         <SocialMedia />
       </div>
-      <nav className="bg-gray-50 border-b shadow flex sm:justify-evenly items-center h-[100px] fixed z-30 inset-0">
+      <nav className="bg-gray-50 border-b shadow flex sm:justify-evenly items-center h-[100px] sticky top-0 z-[1000]">
         <div className="flex items-center">
           <Rede />
           <div className="menu-icon" onClick={handleClick}>
