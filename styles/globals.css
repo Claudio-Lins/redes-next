@@ -7,7 +7,7 @@
 }
 
 .navItem {
-  @apply flex items-center text-sm font-bold tracking-wide sm:font-normal hover:border-b-4 hover:border-blue-600 p-2 mx-auto sm:text-blue-600 text-white;
+  @apply flex items-center text-sm py-5 font-bold tracking-wide sm:font-normal hover:border-b-2 hover:border-blue-600 p-2 mx-auto sm:text-blue-600 text-white;
 }
 
 @tailwind utilities;
