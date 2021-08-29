@@ -3,6 +3,7 @@ import Dropdown from "./Dropdown";
 import Link from "next/link";
 import Rede from "./logos/Rede";
 import SocialMedia from "./SocialMedia";
+import IconDown from "../navbar/IconDown";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
@@ -55,8 +56,11 @@ export default function Navbar() {
               onMouseLeave={onMouseLeave}
             >
               <Link href="/quem-somos">
-                <a className="md:py-8" onClick={closeMobileMenu}>
-                  Quem somos <i className="fas fa-caret-down" />{" "}
+                <a
+                  className="md:py-8 flex items-center"
+                  onClick={closeMobileMenu}
+                >
+                  <span>Quem somos</span> <IconDown />
                 </a>
               </Link>
               {dropdown && <Dropdown />}
