@@ -46,7 +46,7 @@ export default function About({ aboutPage }) {
               href="/conselho-internacional"
             />
             <BtnQuem label="Conselho Diretor" href="/conselho-diretor" />
-            <BtnQuem label="Secretaria Técnica" href="/" />
+            <BtnQuem label="Secretaria Técnica" href="/secretaria-tecnica" />
           </div>
           <hr />
         </section>

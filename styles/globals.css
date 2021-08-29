@@ -2,8 +2,18 @@
 
 @tailwind components;
 
+@layer components {
+  .header-link {
+    @apply flex items-center space-x-2 cursor-pointer;
+  }
+
+  .span {
+    @apply relative text-white sm:text-blue-600 uppercase text-sm font-medium before:bg-blue-600 before:rounded-bl before:-bottom-1.5 before:h-0.5 before:inset-x-0 before:absolute before:transform before:origin-center before:scale-x-0 before:transition-all before:duration-300 group-hover:before:scale-x-100;
+  }
+}
+
 .dropdownMenu {
-  @apply bg-white text-blue-600 w-[160px] -ml-5 rounded shadow-sm absolute top-[90px] list-none text-center flex flex-col justify-center transform;
+  @apply bg-white text-blue-600 w-[150px] -ml-5 normal-case rounded shadow-sm absolute top-[90px] list-none text-center flex flex-col justify-center transform;
 }
 
 .navItem {
@@ -51,6 +61,7 @@
 
 .nav-menu {
   display: flex;
+  justify-content: space-evenly;
   width: 60%;
   height: 10vh;
   top: 80px;
@@ -96,8 +107,9 @@
   .nav-menu {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     position: absolute;
     top: 100px;
     left: -100%;
@@ -113,7 +125,8 @@
     transition: all 0.3s ease;
     z-index: 1;
     /* height: 100%; */
-    padding: 30px;
+    padding-top: 0px;
+    padding-bottom: 80px;
   }
 
   /* .nav-links {

@@ -40,51 +40,66 @@ export default function Navbar() {
         </div>
 
         <div className={click ? "nav-menu active" : "nav-menu"}>
-          <div className="navItem">
+          <div className="header-link group">
             <Link href="/">
-              <a onClick={closeMobileMenu}>Home</a>
-            </Link>
-          </div>
-          <div
-            className="flex items-center p-2 mx-auto text-sm text-white font-bold sm:font-normal md:text-blue-600 z-10 hover:border-b-2 hover:border-blue-700 "
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-          >
-            <Link href="/quem-somos" className="">
               <a onClick={closeMobileMenu}>
-                Quem somos <i className="fas fa-caret-down" />{" "}
+                <span className="span">Home</span>
               </a>
             </Link>
-            {dropdown && <Dropdown />}
           </div>
 
-          <div className="navItem">
-            <Link href="#" className="">
-              <a onClick={closeMobileMenu}>Ações</a>
-            </Link>
+          <div className="header-link group">
+            <div
+              className="flex items-center uppercase font-medium mx-auto text-sm text-white md:text-blue-600 z-10"
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+            >
+              <Link href="/quem-somos">
+                <a className="md:py-8" onClick={closeMobileMenu}>
+                  Quem somos <i className="fas fa-caret-down" />{" "}
+                </a>
+              </Link>
+              {dropdown && <Dropdown />}
+            </div>
           </div>
 
-          <div className="navItem">
+          <div className="header-link group">
             <Link href="#">
-              <a onClick={closeMobileMenu}>Notícias</a>
+              <a onClick={closeMobileMenu}>
+                <span className="span">Ações</span>
+              </a>
             </Link>
           </div>
 
-          <div className="navItem">
+          <div className="header-link group">
             <Link href="#">
-              <a onClick={closeMobileMenu}>Campanhas</a>
+              <a onClick={closeMobileMenu}>
+                <span className="span">Notícias</span>
+              </a>
             </Link>
           </div>
 
-          <div className="navItem">
+          <div className="header-link group">
+            <Link href="#">
+              <a onClick={closeMobileMenu}>
+                <span className="span">Campanhas</span>
+              </a>
+            </Link>
+          </div>
+
+          <div className="header-link group">
             <Link href="/arquivos">
-              <a onClick={closeMobileMenu}>Arquivo</a>
+              <a onClick={closeMobileMenu}>
+                <span className="span">Arquivo</span>
+              </a>
             </Link>
           </div>
 
-          <div className="navItem">
-            <Link href="/contact" className="nav-links-mobile">
-              <a onClick={closeMobileMenu}>Contacto</a>
+          <div className="header-link group">
+            <Link href="/contact">
+              <a onClick={closeMobileMenu}>
+                <span className="span">Contacto</span>
+              </a>
             </Link>
           </div>
         </div>
